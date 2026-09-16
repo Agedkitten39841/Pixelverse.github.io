@@ -1,2 +1,47 @@
-# Google App Engine generated folder
-appengine-generated/
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Verse SMP</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            background-image: url("file_00000000e3d482108be29f77ad483d21.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .server-button {
+            padding: 18px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.75);
+            border: 2px solid white;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .server-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="server-button" href="minecraft://?addExternalServer=Pixel%20Verse%7C81.12.50.28:19132">
+        ورود به سرور
+    </a>
+
+</body>
+</html>
