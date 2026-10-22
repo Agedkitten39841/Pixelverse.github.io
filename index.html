@@ -1,165 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avezoov</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>biomaze.ir</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f1f1f1;
+    color: #101e75;
+}
 
-        .container {
-            width: 90%;
-            max-width: 500px;
-            margin: 0 auto;
-            padding-top: 100px;
-        }
+.browser {
+    height: 112px;
+    background: #092dbb;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 15px;
+    direction: ltr;
+}
 
-        h1 {
-            font-size: 42px;
-            font-weight: 900;
-            margin-bottom: 65px;
-            letter-spacing: 2px;
-        }
+.browser-icon {
+    color: white;
+    font-size: 30px;
+    min-width: 30px;
+    text-align: center;
+}
 
-        .section {
-            margin-bottom: 35px;
-        }
+.address {
+    flex: 1;
+    max-width: 500px;
+    background: #3555c5;
+    border-radius: 40px;
+    color: white;
+    padding: 17px 22px;
+    font-size: 22px;
+    white-space: nowrap;
+}
 
-        .label {
-            display: block;
-            font-size: 17px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+.notice {
+    background: #0860f5;
+    color: white;
+    text-align: center;
+    padding: 22px 10px;
+    font-size: 18px;
+}
 
-        .copy-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            padding: 14px;
-            border: 1px solid #333333;
-            border-radius: 10px;
-            background-color: #111111;
-        }
+.navbar {
+    background: white;
+    height: 140px;
+    border-radius: 0 0 35px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 10px 30px #0000000c;
+}
 
-        .username {
-            font-size: 18px;
-            font-weight: bold;
-            overflow-wrap: anywhere;
-        }
+.nav-button {
+    width: 75px;
+    height: 75px;
+    border: 1px solid #80a6c4;
+    border-radius: 17px;
+    background: white;
+    color: #3576bd;
+    font-size: 32px;
+    cursor: pointer;
+}
 
-        button {
-            background-color: #ffffff;
-            color: #000000;
-            border: none;
-            border-radius: 6px;
-            padding: 9px 14px;
-            font-weight: bold;
-            cursor: pointer;
-            flex-shrink: 0;
-        }
+.nav-button:focus {
+    outline: none;
+}
 
-        button:hover {
-            background-color: #cccccc;
-        }
+.logo {
+    font-size: 55px;
+    font-weight: bold;
+    font-style: italic;
+    color: #101e75;
+}
 
-        .telegram-link {
-            display: block;
-            padding: 15px;
-            border: 1px solid #333333;
-            border-radius: 10px;
-            background-color: #111111;
-            color: #ffffff;
-            font-size: 17px;
-            font-weight: bold;
-            text-decoration: none;
-            overflow-wrap: anywhere;
-            transition: 0.2s;
-        }
+.logo small {
+    font-size: 27px;
+    color: #1675df;
+}
 
-        .telegram-link:hover {
-            background-color: #222222;
-        }
+.container {
+    max-width: 760px;
+    margin: 65px auto 30px;
+    padding: 15px;
+}
 
-        #message {
-            margin-top: 12px;
-            font-size: 14px;
-            color: #aaaaaa;
-            min-height: 18px;
-        }
-    </style>
+.card {
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 0 22px #7bc8ff;
+    margin-bottom: 85px;
+    padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 245px;
+    position: relative;
+}
+
+.card-image {
+    width: 48%;
+    min-height: 170px;
+    border-radius: 23px;
+    background: linear-gradient(135deg, #08147e, #087eff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.card-content {
+    flex: 1;
+    text-align: right;
+}
+
+.line {
+    height: 4px;
+    width: 80px;
+    background: #55d89c;
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+.card p {
+    color: #18275d;
+    font-size: 17px;
+    line-height: 2;
+    margin: 0;
+}
+
+.card-button {
+    display: inline-block;
+    background: #0960f5;
+    color: white;
+    border-radius: 30px;
+    padding: 13px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.chat {
+    position: fixed;
+    bottom: 25px;
+    right: 22px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #101078;
+    color: white;
+    font-size: 35px;
+    border: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .browser {
+        height: 100px;
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .address {
+        font-size: 19px;
+        padding: 17px 14px;
+    }
+
+    .notice {
+        font-size: 16px;
+    }
+
+    .navbar {
+        height: 125px;
+    }
+
+    .nav-button {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 43px;
+    }
+
+    .container {
+        margin-top: 65px;
+        padding: 18px;
+    }
+
+    .card {
+        padding: 20px 15px;
+        gap: 13px;
+        min-height: 230px;
+        margin-bottom: 65px;
+    }
+
+    .card-image {
+        width: 44%;
+        min-height: 150px;
+        font-size: 50px;
+    }
+
+    .card h2 {
+        font-size: 23px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card-button {
+        font-size: 13px;
+        padding: 12px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
+<!-- نوار بالای صفحه -->
+<div class="browser">
+    <button class="browser-icon"
+        style="background:none;border:0;cursor:pointer;"
+        type="button">⋮</button>
 
-        <h1>Avezoov</h1>
+    <span class="browser-icon">▣</span>
 
-        <div class="section">
-            <span class="label">Telegram Username</span>
+    <span class="browser-icon">＋</span>
 
-            <div class="copy-box">
-                <span class="username" id="username">@frozeneen</span>
-                <button onclick="copyUsername()">Copy</button>
-            </div>
+    <div class="address">☷ biomaze.ir</div>
 
-            <div id="message" aria-live="polite"></div>
+    <span class="browser-icon">⌂</span>
+</div>
+
+<!-- نوار اطلاع رسانی -->
+<div class="notice">
+    ثبت نام اشتراک الماس شروع صفر از مهر
+</div>
+
+<!-- سربرگ سایت -->
+<header class="navbar">
+
+    <button class="nav-button" type="button"
+        aria-label="کاربر">♙</button>
+
+    <div class="logo">ilo<small>♧</small></div>
+
+    <button class="nav-button" type="button"
+        aria-label="سبد خرید">🛒</button>
+
+    <button class="nav-button" type="button"
+        aria-label="منو">☰</button>
+
+</header>
+
+<!-- کارت های اصلی -->
+<main class="container">
+
+    <section class="card">
+        <div class="card-image">📚</div>
+
+        <div class="card-content">
+            <div class="line"></div>
+            <h2>سؤالات</h2>
+            <p>و پاسخنامه‌ها</p>
+            <p>و تحلیل‌های کنکور</p>
+            <p>تجربی · ریاضی · انسانی</p>
+            <div class="card-button">مشاهده کنید ‹</div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-image">💻</div>
+
+        <div class="card-content">
+            <div class="line"></div>
+            <h2>آزمون</h2>
+            <p>در تمام پایه‌ها</p>
+            <p>تجربی · ریاضی · انسانی</p>
+            <div class="card-button">ثبت نام در آزمون ‹</div>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-content">
+            <div class="line"></div>
+            <h2>کلاس آنلاین</h2>
+            <p>در تمام پایه‌ها</p>
+            <p>تجربی · ریاضی · انسانی</p>
+            <div class="card-button">مشاهده کلاس‌ها ‹</div>
         </div>
 
-        <div class="section">
-            <span class="label">Telegram Link</span>
+        <div class="card-image">📖</div>
+    </section>
 
-            <a
-                class="telegram-link"
-                href="https://t.me/Tarakanchaebancha"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                https://t.me/Tarakanchaebancha
-            </a>
-        </div>
+</main>
 
-    </div>
-
-    <script>
-        async function copyUsername() {
-            const username = "@frozeneen";
-            const message = document.getElementById("message");
-
-            try {
-                await navigator.clipboard.writeText(username);
-                message.textContent = "Username copied successfully!";
-            } catch (error) {
-                const input = document.createElement("textarea");
-                input.value = username;
-                input.style.position = "fixed";
-                input.style.opacity = "0";
-                document.body.appendChild(input);
-                input.select();
-
-                const success = document.execCommand("copy");
-                input.remove();
-
-                message.textContent = success
-                    ? "Username copied successfully!"
-                    : "Please copy the username manually.";
-            }
-        }
-    </script>
+<!-- دکمه شناور -->
+<button class="chat" type="button" aria-label="گفتگو">•••</button>
 
 </body>
 </html>
