@@ -10,174 +10,32 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
     background: #f1f1f1;
+}
+
+body {
     font-family: Tahoma, Arial, sans-serif;
 }
 
-/* نوار آدرس */
-.browser {
-    height: 115px;
-    background: #1032bd;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 7px;
-    padding: 7px;
-    direction: ltr;
-}
-
-.browser button {
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 27px;
-    min-width: 25px;
-    cursor: pointer;
-}
-
-.address {
-    flex: 1;
-    min-width: 0;
-    background: #3657c7;
-    color: white;
-    border-radius: 50px;
-    padding: 20px 12px;
-    font: 19px Arial, sans-serif;
-    white-space: nowrap;
-    text-align: left;
-}
-
-/* نوار آبی اطلاعیه */
-.notice {
-    min-height: 128px;
-    background: #0860f5;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15px;
-    font-size: 17px;
-}
-
-/* سربرگ سفید */
-.header {
-    height: 185px;
-    background: white;
-    border-radius: 0 0 40px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    direction: ltr;
-    padding: 10px;
-}
-
-/* سه دکمه */
-.header button {
-    width: 62px;
-    height: 85px;
-    flex-shrink: 0;
-    border: 1px solid #b4c6d0;
-    border-radius: 23px;
-    background: white;
-    color: #427eaf;
-    font-size: 29px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.header button:focus,
-.header button:active {
-    outline: none;
-}
-
-/* لوگو */
-.logo {
-    font-size: 42px;
-    font-weight: bold;
-    font-style: italic;
-    color: #101e70;
-    white-space: nowrap;
-}
-
-/* عکس اصلی */
+/* فقط عکس اصلی سایت نمایش داده می‌شود */
 .main-image {
     display: block;
     width: 100%;
     height: auto;
     margin: 0;
-}
-
-/* نمایش در صفحه‌های بزرگ */
-@media (min-width: 501px) {
-    .browser {
-        height: 180px;
-    }
-
-    .browser button {
-        font-size: 32px;
-    }
-
-    .address {
-        font-size: 21px;
-    }
-
-    .notice {
-        font-size: 19px;
-    }
-
-    .header button {
-        width: 85px;
-        height: 85px;
-        font-size: 34px;
-    }
-
-    .logo {
-        font-size: 52px;
-    }
+    padding: 0;
+    border: none;
 }
 </style>
 </head>
 
 <body>
 
-<!-- نوار آدرس -->
-<div class="browser">
-    <button type="button">⋮</button>
-    <button type="button">▣</button>
-    <button type="button">＋</button>
-
-    <div class="address">☷ biomaze.ir</div>
-
-    <button type="button">⌂</button>
-</div>
-
-<!-- اطلاعیه -->
-<div class="notice">
-    ثبت نام اشتراک الماس شروع صفر از مهر
-</div>
-
-<!-- سه دکمه و لوگو -->
-<header class="header">
-
-    <button type="button" aria-label="منو">☰</button>
-
-    <button type="button" aria-label="سبد خرید">🛒</button>
-
-    <div class="logo">
-        <span style="color:#1680d8">♧</span>ilo
-    </div>
-
-    <button type="button" aria-label="کاربر">♙</button>
-
-</header>
-
-<!-- عکس اصلی سایت -->
 <img
     class="main-image"
     src="Screenshot_۲۰۲۶۱۰۲۲-۱۶۰۳۱۴_Chrome.jpg"
