@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>biomaze.ir</title>
 
 <style>
@@ -12,222 +12,133 @@
 
 body {
     margin: 0;
-    font-family: Tahoma, Arial, sans-serif;
     background: #f1f1f1;
-    color: #101e75;
+    font-family: Tahoma, Arial, sans-serif;
 }
 
+/* نوار آدرس */
 .browser {
-    height: 112px;
-    background: #092dbb;
+    height: 115px;
+    background: #1032bd;
     display: flex;
     align-items: center;
-    padding: 12px;
-    gap: 15px;
+    justify-content: space-around;
+    gap: 7px;
+    padding: 7px;
     direction: ltr;
 }
 
-.browser-icon {
+.browser button {
+    background: transparent;
     color: white;
-    font-size: 30px;
-    min-width: 30px;
-    text-align: center;
+    border: none;
+    font-size: 27px;
+    min-width: 25px;
+    cursor: pointer;
 }
 
 .address {
     flex: 1;
-    max-width: 500px;
-    background: #3555c5;
-    border-radius: 40px;
+    min-width: 0;
+    background: #3657c7;
     color: white;
-    padding: 17px 22px;
-    font-size: 22px;
+    border-radius: 50px;
+    padding: 20px 12px;
+    font: 19px Arial, sans-serif;
     white-space: nowrap;
+    text-align: left;
 }
 
+/* نوار آبی اطلاعیه */
 .notice {
+    min-height: 128px;
     background: #0860f5;
     color: white;
-    text-align: center;
-    padding: 22px 10px;
-    font-size: 18px;
-}
-
-.navbar {
-    background: white;
-    height: 140px;
-    border-radius: 0 0 35px 35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 10px 30px #0000000c;
-}
-
-.nav-button {
-    width: 75px;
-    height: 75px;
-    border: 1px solid #80a6c4;
-    border-radius: 17px;
-    background: white;
-    color: #3576bd;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-.nav-button:focus {
-    outline: none;
-}
-
-.logo {
-    font-size: 55px;
-    font-weight: bold;
-    font-style: italic;
-    color: #101e75;
-}
-
-.logo small {
-    font-size: 27px;
-    color: #1675df;
-}
-
-.container {
-    max-width: 760px;
-    margin: 65px auto 30px;
-    padding: 15px;
-}
-
-.card {
-    background: white;
-    border-radius: 35px;
-    box-shadow: 0 0 22px #7bc8ff;
-    margin-bottom: 85px;
-    padding: 28px 24px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    min-height: 245px;
-    position: relative;
-}
-
-.card-image {
-    width: 48%;
-    min-height: 170px;
-    border-radius: 23px;
-    background: linear-gradient(135deg, #08147e, #087eff);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 75px;
-    color: white;
-    flex-shrink: 0;
-}
-
-.card-content {
-    flex: 1;
-    text-align: right;
-}
-
-.line {
-    height: 4px;
-    width: 80px;
-    background: #55d89c;
-    margin-bottom: 25px;
-}
-
-.card h2 {
-    margin: 0 0 12px;
-    font-size: 28px;
-}
-
-.card p {
-    color: #18275d;
+    text-align: center;
+    padding: 15px;
     font-size: 17px;
-    line-height: 2;
+}
+
+/* سربرگ سفید */
+.header {
+    height: 185px;
+    background: white;
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    direction: ltr;
+    padding: 10px;
+}
+
+/* سه دکمه */
+.header button {
+    width: 62px;
+    height: 85px;
+    flex-shrink: 0;
+    border: 1px solid #b4c6d0;
+    border-radius: 23px;
+    background: white;
+    color: #427eaf;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header button:focus,
+.header button:active {
+    outline: none;
+}
+
+/* لوگو */
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    font-style: italic;
+    color: #101e70;
+    white-space: nowrap;
+}
+
+/* عکس اصلی */
+.main-image {
+    display: block;
+    width: 100%;
+    height: auto;
     margin: 0;
 }
 
-.card-button {
-    display: inline-block;
-    background: #0960f5;
-    color: white;
-    border-radius: 30px;
-    padding: 13px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.chat {
-    position: fixed;
-    bottom: 25px;
-    right: 22px;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background: #101078;
-    color: white;
-    font-size: 35px;
-    border: 0;
-    cursor: pointer;
-}
-
-@media (max-width: 500px) {
+/* نمایش در صفحه‌های بزرگ */
+@media (min-width: 501px) {
     .browser {
-        height: 100px;
-        gap: 10px;
-        padding: 8px;
+        height: 180px;
+    }
+
+    .browser button {
+        font-size: 32px;
     }
 
     .address {
-        font-size: 19px;
-        padding: 17px 14px;
+        font-size: 21px;
     }
 
     .notice {
-        font-size: 16px;
+        font-size: 19px;
     }
 
-    .navbar {
-        height: 125px;
-    }
-
-    .nav-button {
-        width: 65px;
-        height: 65px;
+    .header button {
+        width: 85px;
+        height: 85px;
+        font-size: 34px;
     }
 
     .logo {
-        font-size: 43px;
-    }
-
-    .container {
-        margin-top: 65px;
-        padding: 18px;
-    }
-
-    .card {
-        padding: 20px 15px;
-        gap: 13px;
-        min-height: 230px;
-        margin-bottom: 65px;
-    }
-
-    .card-image {
-        width: 44%;
-        min-height: 150px;
-        font-size: 50px;
-    }
-
-    .card h2 {
-        font-size: 23px;
-    }
-
-    .card p {
-        font-size: 14px;
-    }
-
-    .card-button {
-        font-size: 13px;
-        padding: 12px;
+        font-size: 52px;
     }
 }
 </style>
@@ -235,86 +146,43 @@ body {
 
 <body>
 
-<!-- نوار بالای صفحه -->
+<!-- نوار آدرس -->
 <div class="browser">
-    <button class="browser-icon"
-        style="background:none;border:0;cursor:pointer;"
-        type="button">⋮</button>
-
-    <span class="browser-icon">▣</span>
-
-    <span class="browser-icon">＋</span>
+    <button type="button">⋮</button>
+    <button type="button">▣</button>
+    <button type="button">＋</button>
 
     <div class="address">☷ biomaze.ir</div>
 
-    <span class="browser-icon">⌂</span>
+    <button type="button">⌂</button>
 </div>
 
-<!-- نوار اطلاع رسانی -->
+<!-- اطلاعیه -->
 <div class="notice">
     ثبت نام اشتراک الماس شروع صفر از مهر
 </div>
 
-<!-- سربرگ سایت -->
-<header class="navbar">
+<!-- سه دکمه و لوگو -->
+<header class="header">
 
-    <button class="nav-button" type="button"
-        aria-label="کاربر">♙</button>
+    <button type="button" aria-label="منو">☰</button>
 
-    <div class="logo">ilo<small>♧</small></div>
+    <button type="button" aria-label="سبد خرید">🛒</button>
 
-    <button class="nav-button" type="button"
-        aria-label="سبد خرید">🛒</button>
+    <div class="logo">
+        <span style="color:#1680d8">♧</span>ilo
+    </div>
 
-    <button class="nav-button" type="button"
-        aria-label="منو">☰</button>
+    <button type="button" aria-label="کاربر">♙</button>
 
 </header>
 
-<!-- کارت های اصلی -->
-<main class="container">
-
-    <section class="card">
-        <div class="card-image">📚</div>
-
-        <div class="card-content">
-            <div class="line"></div>
-            <h2>سؤالات</h2>
-            <p>و پاسخنامه‌ها</p>
-            <p>و تحلیل‌های کنکور</p>
-            <p>تجربی · ریاضی · انسانی</p>
-            <div class="card-button">مشاهده کنید ‹</div>
-        </div>
-    </section>
-
-    <section class="card">
-        <div class="card-image">💻</div>
-
-        <div class="card-content">
-            <div class="line"></div>
-            <h2>آزمون</h2>
-            <p>در تمام پایه‌ها</p>
-            <p>تجربی · ریاضی · انسانی</p>
-            <div class="card-button">ثبت نام در آزمون ‹</div>
-        </div>
-    </section>
-
-    <section class="card">
-        <div class="card-content">
-            <div class="line"></div>
-            <h2>کلاس آنلاین</h2>
-            <p>در تمام پایه‌ها</p>
-            <p>تجربی · ریاضی · انسانی</p>
-            <div class="card-button">مشاهده کلاس‌ها ‹</div>
-        </div>
-
-        <div class="card-image">📖</div>
-    </section>
-
-</main>
-
-<!-- دکمه شناور -->
-<button class="chat" type="button" aria-label="گفتگو">•••</button>
+<!-- عکس اصلی سایت -->
+<img
+    class="main-image"
+    src="Screenshot_۲۰۲۶۱۰۲۲-۱۶۰۳۱۴_Chrome.jpg"
+    alt="تصویر اصلی سایت"
+>
 
 </body>
 </html>
